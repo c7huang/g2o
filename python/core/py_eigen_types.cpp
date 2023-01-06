@@ -194,13 +194,13 @@ void declareEigenTypes(py::module& m) {
             return Eigen::Quaterniond::FromTwoVectors(a, b);
           })
 
-      .def("x", static_cast<const double& (Eigen::Quaterniond::*)() const>(
+      .def("x", static_cast<double (Eigen::Quaterniond::*)() const>(
                     &Eigen::Quaterniond::x))
-      .def("y", static_cast<const double& (Eigen::Quaterniond::*)() const>(
+      .def("y", static_cast<double (Eigen::Quaterniond::*)() const>(
                     &Eigen::Quaterniond::y))
-      .def("z", static_cast<const double& (Eigen::Quaterniond::*)() const>(
+      .def("z", static_cast<double (Eigen::Quaterniond::*)() const>(
                     &Eigen::Quaterniond::z))
-      .def("w", static_cast<const double& (Eigen::Quaterniond::*)() const>(
+      .def("w", static_cast<double (Eigen::Quaterniond::*)() const>(
                     &Eigen::Quaterniond::w))
 
       .def("vec", static_cast<const Eigen::VectorBlock<
